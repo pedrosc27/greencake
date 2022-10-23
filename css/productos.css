@@ -1,0 +1,118 @@
+body{
+    background-color:  #FBF6E2;
+}
+
+/***** INICIA NAV *****/
+.img-logo{
+    height: 80px;
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.section-nav{
+    background-image: url(../assets/mel-t01.png);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-position-x: center;
+    height: 300px;
+    top: 0px;
+}
+/***** FINALIZA NAV *****/
+
+/***** INICIA PRODUCTOS *****/
+.productos{
+    margin-top: 106px;
+    padding: 80px 0px;
+    position: relative;
+    z-index: 2;
+}
+.contenedor-filtros{
+    padding: 20PX;
+    background-color: #F8BD49;
+    border-radius: 25px;
+}
+.contenedor-filtros h5{
+    font-family: Poppins;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+    margin: 10px 0px;
+}
+.contenedor-filtros ul{
+    list-style-type: none;
+}
+.contenedor-filtros ul li{
+    margin-bottom: 10px;
+}
+.contenedor-filtros ul li a{
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #C23320;
+
+}
+.contenedor-fantasma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-fantasma img{
+    align-items: center;
+}
+.padding-filtro{
+    padding-right: 30px;
+}
+.contenedor-pastel{
+    padding: 20PX;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+.contenedor-pastel h6{
+    text-decoration: none;
+    font-family: Poppins;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.productos-card-container a{
+    text-decoration: none;
+
+}
+.color-naranja{
+    background-color: #E79629;   
+}
+.color-rojo{
+    background-color: #4E1353;
+}
+.color-morado{
+    background-color: #4E1353;
+}
+.productos-card-container{
+    padding-top: 83px;
+}
+/***** FINALIZA PRODUCTOS *****/
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+
+  }
+/***** INICIA MEDIA QUERYS *****/

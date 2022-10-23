@@ -1,0 +1,79 @@
+body{
+    background-color:#FBF6E2 ;   
+}
+.fondomorado{
+    background-color:#F8BD49 ;
+    background-image: url("assets/nube.png");
+    position: relative; 
+    margin-top: 106px;
+    padding-top: 10px;
+}
+
+.navbar-color{
+    background-color: #F8BD49;
+}
+
+.boton{
+    align-items: center;
+}
+
+.btn-pal{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    background-color: #C23320;
+    border-color: #C23320;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.texto{
+    padding-left: 5%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    align-items: center;
+    color: #E79629;
+}
+
+.titulo2{
+    font-family: 'Creepster';
+    font-size: 55px;
+    align-items: center;
+    color: #E79629;
+}
+
+.luna{
+    width: 398px;
+    position: absolute;
+    bottom: -300px;
+    right: 10px;
+}
+.boton-slider {
+    text-align: center;
+}
+
+/***** NAVBAR *****/
+
+.img-logo{
+    height: 80px;
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.section-nav{
+    background-image: url(../assets/images/mel-t01.png);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background-position-x: center;
+    height: 300px;
+    top: 0px;
+}
