@@ -1,0 +1,103 @@
+body{
+    background-color: #FBF6E2;
+}
+.img-logo{
+    height: 80px;
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.section-nav{
+    background-image: url(../assets/mel-t01.png);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background-position-x: center;
+    height: 300px;
+    top: 0px;
+}
+
+#tela{
+    display: inline-block;
+    z-index: 0;
+    opacity: 20%;
+}
+.tela{
+    position: relative;
+    z-index: 0;
+    opacity: 20%;
+}
+.contenedores{
+    z-index: 50;
+}
+.img-tela{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    opacity: 20%;
+}
+.bloque-contacto{
+    margin-top: 100px;
+    padding-top: 200px;
+}
+.btn-pal{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    background-color: #C23320;
+    border-color: #C23320;
+    border-radius: 20px;
+    align-items: center;
+}
+.redes-icon{
+    width: 55px;
+}
+.back{
+    background-color: #FBF6E2;
+}
+.Poppins{
+    font-family: 'Poppins';
+    font-size: 20px;
+}
+.Creepster{
+    font-family: 'Creepster';
+    font-size: 34px;
+}
+/***** FOOTER *****/
+.footer-bg{
+    background-color: #4E1353;
+}
+a{
+    text-decoration: none;
+}
+.link-gc:link {
+    color: #FBF6E2;
+}
+.link-gc:hover {
+    border-bottom: 1px solid;
+    background: #4E1353;
+    border-radius: 2px;
+}
+.link-gc:visited {
+    color: #FBF6E2;
+}
+.texto-inferior-link{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 11px;
+    align-items: center;
+}
+.texto-inferior{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+}
+.vl {
+    border-left: 3px solid #4E1353;
+    height: 509px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
