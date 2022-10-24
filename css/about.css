@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+.img-logo{
+    height: 80px;
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.section-nav{
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    background-position-x: center;
+    height: 300px;
+    top: 0px;
+}
+
+.fondomorado{
+    background-image: url("../assets/nube.png");
+    position: relative; 
+    margin-top: -20px;
+    padding-top: 200px;
+}
+.navbar{
+    background-color: #F8BD49;
+}
+.team{
+    margin: auto;
+}
+/*Animaciones bruja*/
+.bruja img{
+    position: absolute;
+    margin-left: 90px;
+    margin-top: -40px;
+}
+
+.bruja {
+    animation-duration: 2s;
+    animation-name: bruja;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes bruja {
+    from {
+      margin-left:100%;
+      width:300%
+    }
+  
+    to {
+     margin-left:0%;
+     width:100%;
+   }
+}
+
+.proy-descrip{
+    margin: 12px;
+    padding: 50px;
+}
+
+.DescriptionAbout p{
+    font-family: 'Poppins', sans-serif;
+    color: #FBF6E2;
+    text-align: justify;
+    font-size: 15px;
+}
+.DescriptionTitle h1{
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    color: #FBF6E2;
+    font-size: 36px;
+}
+.DescriptionTitle h2{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #FBF6E2;
+    font-size: 32px;
+}
+/*Animaciones amurcielago*/
+.murcielago img{
+    position: absolute;
+    margin-left: 90px;
+    margin-top: 300px;
+}
+
+.murcielago {
+    animation-duration: 2s;
+    animation-name: bruja;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+}
+
+@keyframes murcielago {
+    from {
+      margin-bottom:100%;
+      width:300%
+    }
+  
+    to {
+     margin-bottom:0%;
+     width:100%;
+   }
+}
+
+.vl{
+    height: 5px;   
+    background-color: #FBF6E2;
+}
+.member{
+    padding: 30px;
+}
+
+.img-team{
+    margin-left: 20%;
+}
+.img-team img{
+    width: 230px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4E1353;
+}
+.desc-team{
+    text-align: justify;
+    margin: 0;
+    
+    margin-left: -360px;
+}
+.desc-team h4{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #FBF6E2;
+    columns: #FBF6E2;
+}
+
+.desc-team p{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #FBF6E2;
+}
+.contact-team{
+    width: 3%;
+    display: block;
+}
+.linkedin img, .gmail img{
+    height: 35px;
+    width: 35px;
+}
+
+/*
+
+    left: 40%;
+    top:25%;
+    transform: translateY(-50%);
+
+.desc-teamL p{
+    right: 45%;
+    bottom:24%;
+    transform: translateY(50%);
+    
+}
+*/
