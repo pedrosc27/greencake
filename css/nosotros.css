@@ -6,7 +6,7 @@
     font-weight: 700;
 }
 .section-nav{
-    background-image: url("mel-t01.png");
+    background-image: url(../assets/mel-t01.png);
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -15,7 +15,9 @@
     height: 300px;
     top: 0px;
 }
-
+.section-nav .container{
+    background-color: transparent!important;
+}
 body {
     background-color: #FBF6E2;
     font-family: 'Abril Fatface', cursive;
