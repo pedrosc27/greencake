@@ -34,7 +34,7 @@ body{
 }
 .img-tela{
     position: absolute;
-    top: 0px;
+    top: 122px;
     left: 0px;
     z-index: 1;
     opacity: 20%;
@@ -67,6 +67,9 @@ body{
 .Creepster{
     font-family: 'Creepster';
     font-size: 34px;
+}
+.formularios{
+    font-size: 15px;
 }
 /***** FOOTER *****/
 .footer-bg{
