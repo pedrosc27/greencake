@@ -78,9 +78,11 @@ body{
     top: 0px;
 }
 
-/***** FOOTER *****/
+/***** SegundaParte inicio *****/
 .section-header{
     font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
+    padding-top: auto;
 
 }
 .TitCategorias{
@@ -125,7 +127,7 @@ body{
   .img-subcat:hover .img-subcatHov {
     display: inline;
 }
-
+/***** Categorías pasteles *****/
 .SubCategoria{
   font-size: 20px;
   font-family: 'Creepster', cursive;
@@ -149,6 +151,7 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
+/***** Opiniones usuarios*****/
 .circulo{
   width: 100px;
   height: 100px;
@@ -225,13 +228,21 @@ a{
       background-color: #F8BD49;
   }
 
-  .arania1, .arania2{
+  .arania1, .arania2, .luna, .mano-img, .vl{
     display: none;
   }
+  .section-header{
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+  }
+
 
 }
 @media only screen and (max-width: 920px) { 
-  .arania2{
+  /* For mobile tablets: */
+  .arania2, .luna{
     display: none;
   }
 }
