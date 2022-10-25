@@ -19,7 +19,7 @@ body{
     background-size: cover;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     background-position-x: center;
     height: 300px;
     top: 0px;
@@ -27,7 +27,7 @@ body{
 /***** FINALIZA NAV *****/
 .fondomorado{
     margin-top: 106px;
-    padding: 80px 0px;
+    padding-top: 15%;
     position: relative;
     z-index: 2;
 }
@@ -74,13 +74,13 @@ body{
 .DescriptionTitle h1{
     text-align: left;
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: #4E1353;
     font-size: 36px;
 }
 .DescriptionTitle h2{
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: #4E1353;
     font-size: 32px;
 }
 /*Animaciones amurcielago*/
@@ -163,7 +163,7 @@ body{
 /****Footer****/
 .gato{
     position: absolute;
-    margin-left: 45%;
+    margin-left: 90%;
     margin-top: -8%;
     max-width: 9%;
     z-index: 100;
