@@ -83,11 +83,9 @@ body{
     font-family: 'Poppins', sans-serif;
 
 }
-.TitCategorias, h5{
-    font-size: 20px;
+.TitCategorias{
+    font-size: calc(1.275rem + .3vw); 
     font-family: 'Poppins', sans-serif;
-    
-    
 }
 .vl {
     border-left: 3px solid #4E1353;
@@ -97,15 +95,17 @@ body{
   }
   .arania1{
     position: absolute;
-    margin-left: 16%;
-    max-width: 9%;
+    margin-left: 8em;
+    margin-top: auto;
+    max-width: 8%;
     z-index: 100;
     margin-top: auto;
   }
   .arania2{
     position: absolute;
-    margin-left: 37%;
-    max-width: 12.5%;
+    margin-left: 25em;
+    margin-top: auto;
+    max-width: 11%;
     z-index: 100;
   }
   .img-subcat{
@@ -146,6 +146,7 @@ body{
   display: flex; 
   justify-content:center; 
   align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .circulo{
@@ -206,4 +207,31 @@ a{
     height: 509px;
     padding-left: 1rem;
     margin-left: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .section-nav{
+      background-image: none;
+      background-color: #F8BD49;
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+      background-position-x: center;
+      height: 106px;
+      top: 0px;
+  }
+  .section-nav .navbar-expand-lg{
+      background-color: #F8BD49;
+  }
+
+  .arania1, .arania2{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 920px) { 
+  .arania2{
+    display: none;
+  }
 }
