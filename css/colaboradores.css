@@ -6,9 +6,20 @@ p{
     font-family: Poppins;
     font-size: 16px;
 }
+.txt-p{
+    font-family: Poppins;
+    font-size: 15px;
+    color: #000;
+}
+.colab-txt{
+    font-family: Poppins;
+    font-size: 20px;
+    color: #4E1353;
+}
 
 h4{
     font-family: Poppins;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -18,24 +29,27 @@ h4{
     padding-top: 200px;
 
 }
-
 .spiderAbsolute{
     position: absolute;
     max-width: 650px;
+    margin-top: 50px;
     top: 0;
     right: 0;
     z-index: 0;
    
 }
-
-
-   
-    
+.paragraph-inicio{
+    font-family: Poppins;
+    font-size: 20px;
+}
+.insta{
+    width: 40px;
+}
 
 .spiderwebAbsolute{
     position: absolute;
     top:0;
-    right: 0;
+    right:0;
     
 }
 

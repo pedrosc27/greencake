@@ -1,78 +1,28 @@
 /********************************************** NAVBAR ****/
-.img-logo{
-    height: 80px;
-}
-.navbar-nav a{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-.section-nav{
-    background-image: url(../assets/mel-t01.png);
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-    background-position-x: center;
-    height: 300px;
-    top: 0px;
-}
+
+
+
 
 /********************************************** BODY ****/
-.contenedor1{
-    min-height: 65vh;
-    margin: auto;
-    margin-top: 180px;
-    padding: 80px 0px;
-}
-.navbar-color{
-    background-color: #F8BD49;
-}
-.btn{
-    align-items: center;
-}
-.txt-general{
-    font-family:'Poppins', sans-serif;
-    font-size: 15px;
-}
-.paragraph1{
-    font-family:'Poppins', sans-serif;
-    font-size: 15px;
-    text-align: justify;
-}
-.descripcion{
-    font-family:'Poppins', sans-serif;
-    color: #4E1353;
-    text-align: center;
-    font-size: 24px;
-}
-.row{
-    border: #C23320;
-}
 body{
-    background-color:rgb(251, 246, 226); ;
+    background-color: #FBF6E2;
 }
-.border{
-    border-color:#C23320;
-}
-.button-c{
-    font-family:'Poppins', sans-serif;
-    font-size: 12px;
-    background-color: #C23320;
-    border-color: #C23320;
-    border-radius: 10px;
-}
-.text-btn{
-    font-family: 'Poppins';
-}
-.titulo-c{
-    font-family: 'Poppins';
-    font-size: 20px;
-    align-items: center; 
-    color: #4E1353;  
-}
-.contenedor-padding{
-    padding: 20px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /********************************************** FOOTER ****/
 .footer-bg{
@@ -110,3 +60,4 @@ a{
     padding-left: 1rem;
     margin-left: 1rem;
 }
+

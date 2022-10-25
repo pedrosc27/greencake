@@ -5,14 +5,17 @@ body{
     background-color:#F8BD49 ;
     background-image: url("assets/nube.png");
     position: relative; 
-    margin-top: 106px;
+    margin-top: 105px;
     padding-top: 10px;
 }
 
 .navbar-color{
     background-color: #F8BD49;
 }
-
+.home{
+    display: flex;
+    flex-wrap: wrap;
+}
 .boton{
     align-items: center;
 }
