@@ -18,30 +18,16 @@ body{
     height: 300px;
     top: 0px;
 }
-
-#tela{
-    display: inline-block;
-    z-index: 1;
-    opacity: 20%;
-}
-.tela{
-    position: relative;
-    z-index: 1;
-    opacity: 20%;
-}
 .contenedores{
     z-index: 50;
-}
-.img-tela{
-    position: absolute;
-    top: 122px;
-    left: 0px;
-    z-index: 1;
-    opacity: 20%;
 }
 .bloque-contacto{
     margin-top: 100px;
     padding-top: 200px;
+}
+#text, #number, #email, #dudas{
+    border-color: #C23320;
+    border-width: 2px;
 }
 .btn-pal{
     font-family: 'Poppins', sans-serif;
@@ -70,6 +56,13 @@ body{
 }
 .formularios{
     font-size: 15px;
+}
+.gato{
+    position: absolute;
+    margin-left: 90%;
+    margin-top: -9%;
+    max-width: 10%;
+    z-index: 100;
 }
 /***** FOOTER *****/
 .footer-bg{

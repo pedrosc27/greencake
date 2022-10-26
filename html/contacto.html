@@ -57,11 +57,6 @@
         </nav>
     </section>
     <section class="bloque-contacto">
-        <div>
-            <!--Decoracion de tela de araña-->
-            <img src="../assets/tela.png" class="img-fluid img-tela   " alt="Decoracion con la forma de una tela de araña"
-                id="tela">
-        </div>
         <div class="container">
             <div class="row">
                 <!-- Contenedor texto -->
@@ -76,20 +71,20 @@
                                 <p>
                                     <label for="nombre"> Nombre: <input type="text" id="text"
                                             placeholder="Maria Jose Delgado Salazar" required
-                                            class="form-control" name="Nombre"></label>
+                                            class="form-control" onclick="validar()" name="Nombre"></label>
                                 </p>
                                 <p>
                                     <label for="correo">Correo electronico: <input type="email" id="email"
-                                            placeholder="majo.ds@gmail.com" required class="form-control" name="Correo electronnico"></label>
+                                            placeholder="majo.ds@gmail.com" required class="form-control" onclick="validar()" name="Correo electronnico"></label>
                                 </p>
                                 <p>
                                     <label for="telefono">Numero telefonico: <input type="number" id="number"
-                                        placeholder="656-779-9823" required class="form-control" name="Numero telefonico"></label>
+                                        placeholder="656-779-9823" required class="form-control" onclick="validar()" name="Numero telefonico"></label>
                                 </p>
                             </div>
                         </div>
                         <div class="mb-5">
-                            <textarea class="form-control" id="dudas" rows="3"
+                            <textarea class="form-control" id="dudas" cols="40" rows="5"
                                 placeholder="Dejanos tus dudas en este espacio" name="Duda/s"></textarea><br>
                             <!-- Botón -->
                             <button class="btn btn-danger btn-pal" onclick="validar()" type="button submit">
@@ -113,57 +108,25 @@
             </div>
             <div class="col-md-2 texto"></div>
             <div class="col-md-5">
-                <!-- Contenedor carrusel -->
-                <div class="container-fluid carrusel">
-                    <div class="row">
-                        <div class="col">
-                            <div class="row justify-content-center my-4">
-                                <div class="row-cols-md-9">
-                                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-inner back rounded-5">
-                                            <div class="carousel-item active">
-                                                <img src="../assets/pastel1.png" class="d-block w-100 fluid"
-                                                    alt="Pastel personalizado de Star Wars" />
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="../assets/pastel2.png" class="d-block w-100 fluid"
-                                                    alt="Pastel personalizado de Sangriento" />
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="../assets/pastel3.png" class="d-block w-100 fluid"
-                                                    alt="Pastel personalizado de Stranger Things" />
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Anterior</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Siguiente</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <img src="../assets/woman-baking-cake.jpg" class="img-fluid rounded" alt="Pastelera decorando un pastel">
                 </div>
             </div>
         </div>
         </div>
     </section>
-
-    <!-- Footer -->
+    <img class="gato" src="../assets/gato.png" alt="">
+</div>
+<footer>
     <div class="container-fluid footer-bg text-center p-3">
-        <a class="link-gc" href="http://" target="_blank" rel="noopener noreferrer">
-            <h7 class="small texto-inferior-link"><strong>Página creada por Green Cake. ¡CONÓCENOS!</strong></h7>
+        <a class="link-gc" href="./html/about.html" >
+            <h6 class="small texto-inferior-link"><strong>Página creada por Green Cake. ¡CONÓCENOS!</strong></h6>
         </a>
         <p>
-            <h7 class="small texto-inferior">Awiwitch &copy; 2022. Todos los derechos reservados.</h7>
+            <h6 class="small texto-inferior">Awiwitch &copy; 2022. Todos los derechos reservados.</h6>
         </p>
     </div>
+</footer>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
