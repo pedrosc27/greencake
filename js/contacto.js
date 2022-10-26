@@ -4,20 +4,24 @@ let number = document.getElementById('number');
 let mensaje = document.getElementById('dudas');
 
 function validar() {
-    if(nombre.value.length >=3){
+    var validName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    if(nombre.value.match(validName)){
         return null;
     }
 
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (!email.value.match(validRegex)) {
-    return null;
-    } /* Esta parte nos ayuda a validar los caracteres que iran en el contenedor de email*/
-
-    if(typeOf (number.value)  == 'number'){
+    var validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (email.value.match(validEmail)) {
         return null;
     }
 
-    if(mensaje.value.length >= 8){
+    var validNumber = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im;
+    if(number.value.match(validNumber)){
+        return null;
+    }
+
+    var validMessage = /^.{1,255}$/;
+    if(dudas.value.match(validMessage)){
         return null;
     }
 }
+console.log("Se validaron los datos")

@@ -1,0 +1,148 @@
+.img-logo{
+    height: 80px;
+}
+.navbar-nav a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.section-nav{
+    background-image: url(../assets/mel-t01.png);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    background-position-x: center;
+    height: 300px;
+    top: 0px;
+}
+.section-nav .container{
+    background-color: transparent!important;
+}
+body {
+
+    background-color: #FBF6E2;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Creepster', cursive;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+div#body{
+    width: 1000px;
+}
+
+.contenedor {
+    margin: auto;
+    border: 200px;
+
+    
+    background-color: #000000;
+    
+    
+
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Creepster', cursive;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.container7 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+  }
+  
+  .img {
+    max-width: 100%
+  }
+  
+  .image {
+    flex-basis: 40%
+  }
+  
+.container{
+    background-color: #FBF6E2;
+    float: left;
+
+
+}
+
+@media (max-width:629px) {
+    img#hideImage {
+      display: none;
+    }
+  }
+
+.container2{
+    background-color: rgb(213, 45, 135);
+    float: left;
+    
+   border-radius:22px;
+}
+   
+.container8{
+ background-color: aqua;
+
+
+}
+    
+
+
+.letras{
+    margin: 3px;
+    padding: 2px;
+ background-color: #FBF6E2;
+ float: left;
+ 
+ 
+
+}
+
+.ultimo{
+     background-color: darkgreen;
+
+
+
+}
+
+/********************************************** FOOTER ****/
+.footer-bg{
+    background-color: #4E1353;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+a{
+  text-decoration: none;
+}
+.link-gc:link {
+  color: #FBF6E2;
+}
+.link-gc:hover {
+    border-bottom: 1px solid;
+    background: #4E1353;
+    border-radius: 2px;
+}
+.link-gc:visited {
+  color: #FBF6E2;
+}
+.texto-inferior-link{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 11px;
+    align-items: center;
+}
+.texto-inferior{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+}
+.vl {
+    border-left: 3px solid #4E1353;
+    height: 509px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}

@@ -77,3 +77,173 @@ body{
     height: 300px;
     top: 0px;
 }
+
+/***** SegundaParte inicio *****/
+.section-header{
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
+    padding-top: auto;
+
+}
+.TitCategorias{
+    font-size: calc(1.275rem + .3vw); 
+    font-family: 'Poppins', sans-serif;
+    color: #4E1353;
+}
+.vl {
+    border-left: 3px solid #4E1353;
+    height: 509px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+  .arania1{
+    position: absolute;
+    margin-left: 8em;
+    margin-top: auto;
+    max-width: 8%;
+    z-index: 100;
+    margin-top: auto;
+  }
+  .arania2{
+    position: absolute;
+    margin-left: 25em;
+    margin-top: auto;
+    max-width: 11%;
+    z-index: 100;
+  }
+  .img-subcat{
+    position: relative;
+    display: inline-block;
+  }
+  .img-subcat img{
+    border-radius: 0.7rem;
+  }
+  .img-subcatHov{
+      display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+  }
+  .img-subcat:hover .img-subcatHov {
+    display: inline;
+}
+/***** Categorías pasteles *****/
+.SubCategoria{
+  font-size: 20px;
+  font-family: 'Creepster', cursive;
+  text-align: right;
+  padding-right: 1rem;
+  margin: 12px;
+}
+.txt-SubCat{
+  text-align: justify;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  word-wrap: break-word;
+}
+.Titulo1 hl{
+  border: 2px solid red;
+}
+.Subtitulo h4{
+  display: flex; 
+  justify-content:center; 
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/***** Opiniones usuarios*****/
+.circulo{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  }
+.userOpinion{
+  font-size: 12px;
+  font-family: 'Creepster', cursive;
+  text-align: left;
+  
+  
+}
+.opinion{
+  font-size: 14px;
+  text-align: left;
+  word-wrap: break-word;
+}
+.gato{
+  position: absolute;
+  margin-left: 41%;
+  margin-top: -8%;
+  max-width: 9%;
+  z-index: 100;
+}
+.footer-bg{
+    background-color: #4E1353;
+}
+a{
+  text-decoration: none;
+}
+.link-gc:link {
+  color: #FBF6E2;
+}
+.link-gc:hover {
+    border-bottom: 1px solid;
+    background: #4E1353;
+    border-radius: 2px;
+}
+.link-gc:visited {
+  color: #FBF6E2;
+}
+.texto-inferior-link{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 11px;
+    align-items: center;
+}
+.texto-inferior{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+}
+.vl {
+    border-left: 3px solid #4E1353;
+    height: 509px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .section-nav{
+      background-image: none;
+      background-color: #F8BD49;
+      position: absolute;
+      width: 100%;
+      z-index: 3;
+      background-position-x: center;
+      height: 106px;
+      top: 0px;
+  }
+  .section-nav .navbar-expand-lg{
+      background-color: #F8BD49;
+  }
+
+  .arania1, .arania2, .luna, .mano-img, .vl{
+    display: none;
+  }
+  .section-header{
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-align: center;
+  }
+
+
+}
+@media only screen and (max-width: 920px) { 
+  /* For mobile tablets: */
+  .arania2, .luna{
+    display: none;
+  }
+}

@@ -51,7 +51,8 @@ body{
     text-decoration: none;
     font-family: Poppins;
     font-weight: 600;
-    color: #C23320;
+    color: #000;
+    font-size: 15px;
 
 }
 .contenedor-fantasma{
@@ -66,9 +67,12 @@ body{
     padding-right: 30px;
 }
 .contenedor-pastel{
-    padding: 20PX;
     border-radius: 25px;
     margin-bottom: 20px;
+    text-align: center;
+}
+.contenedor-pastel img{
+    border-radius: 5%;
 }
 .contenedor-pastel h6{
     text-decoration: none;
@@ -95,8 +99,81 @@ body{
 .productos-card-container{
     padding-top: 83px;
 }
-/***** FINALIZA PRODUCTOS *****/
+.contenedor-select{
+    margin-bottom: 20px;
+}
+.contenedor-select h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 600;
+}
+.contenedor-filtros p{
+    font-family: 'Poppins', sans-serif;
+}
+.contenedor-filtros h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+.contenedor-filtros .btn-pal {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-color: #C23320;
+    border-color: #C23320;
+    border-radius: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+#padding-content-product{
+    padding-top: 83px
+}
+.contenedor-filtros h5{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 20px 0px;
+    text-align: left;
+    font-size: 18px;
+}
+.texto-inferior-link {
+    color: #FBF6E2;
+    font-family: 'Poppins';
+    font-size: 11px;
+    align-items: center;
+}
+.texto-inferior {
+    color: #FBF6E2;
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+}
+h5.h5-fantasma{
+    text-align: center;
+}
+#contenedor-filtros{
+    background-color: #4E1353;
+}
+#contenedor-filtros h5{
+    color: #fff;
+}
 
+#contenedor-filtros ul li a{
+    color: #fff;
+}
+
+/***** FINALIZA PRODUCTOS *****/
+/***** INICIA FOOTER *****/
+.footer-bg{
+    background-color: #4E1353;
+}
+.link-gc:link {
+    color: #FBF6E2;
+}
+
+
+/***** FINALIZA FOOTER *****/
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
