@@ -1,9 +1,8 @@
 function addItem(item) {
-    const itemHTML = '<div class=" col-6 col-sm-4">\n' +
-        '<a href="">\n' +
-        '<div class="contenedor-pastel color-' + item.color + '">\n' +
+    const itemHTML = '<div class=" col-6 col-sm-3">\n' +
+        '<a href="producto.html">\n' +
+        '<div class="contenedor-pastel">\n' +
         '<img class="img-fluid" src="../assets/' + item.img + '" alt="">\n' +
-        '<h6>' + item.name + '</h6>\n' +
         '</div>\n' +
         '</a>\n' +
         '</div>';
@@ -15,56 +14,67 @@ function addItem(item) {
 
 addItem({
     'name': 'Pastel 1',
-    'img': 'pastel1.png',
+    'img': 'spooky.jpg',
     'color': 'naranja'
 });
 
 addItem({
     'name': 'Pastel 2',
-    'img': 'pastel2.png',
+    'img': 'spooky2.png',
     'color': 'morado'
 });
 addItem({
     'name': 'Pastel 3',
-    'img': 'pastel3.png',
+    'img': 'tematicas.jpg',
     'color': 'naranja'
 });
 
 addItem({
     'name': 'Pastel 4',
-    'img': 'pastel1.png',
+    'img': 'tematicas2.jpg',
     'color': 'morado'
 });
 addItem({
     'name': 'Pastel 5',
-    'img': 'pastel2.png',
+    'img': 'spooky.jpg',
     'color': 'naranja'
 });
 
 addItem({
     'name': 'Pastel 6',
-    'img': 'pastel3.png',
+    'img': 'spooky2.png',
     'color': 'morado'
 });
 addItem({
     'name': 'Pastel 7',
-    'img': 'pastel1.png',
+    'img': 'tematicas.jpg',
     'color': 'naranja'
 });
 
 addItem({
     'name': 'Pastel 8',
-    'img': 'pastel2.png',
+    'img': 'tematicas2.jpg',
     'color': 'morado'
 });
 addItem({
     'name': 'Pastel 9',
-    'img': 'pastel3.png',
+    'img': 'spooky.jpg',
     'color': 'naranja'
 });
 
 addItem({
     'name': 'Pastel 10',
-    'img': 'pastel1.png',
+    'img': 'spooky2.png',
+    'color': 'morado'
+});
+addItem({
+    'name': 'Pastel 11',
+    'img': 'tematicas.jpg',
+    'color': 'naranja'
+});
+
+addItem({
+    'name': 'Pastel 12',
+    'img': 'tematicas2.jpg',
     'color': 'morado'
 });
