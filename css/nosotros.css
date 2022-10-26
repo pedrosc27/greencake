@@ -111,7 +111,7 @@ div#body{
     background-color: #4E1353;
     padding: 1em 0;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
 }
 a{
