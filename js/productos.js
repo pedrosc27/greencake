@@ -9,9 +9,6 @@ function addItem(item) {
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
 }
-
-
-
 addItem({
     'name': 'Pastel 1',
     'img': 'spooky.jpg',
