@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../css/mi-cuenta.css"/>
-    <link rel="icon" href="../assets/logoIcon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Creepster&family=Poppins&display=swap" rel="stylesheet">
-    <title>Mi cuenta</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/mi-cuenta.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="../assets/logoIcon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Creepster&family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+  <title>Mi cuenta</title>
 </head>
+
 <body>
- <!-- Navbar -->
+    <!-- Navbar -->
  <section class="section-nav">
     <nav class="navbar navbar-expand-lg static-top navbar-color">
-        <div class="container">
+        <div class="c">
             <a class="navbar-brand" href="#">
                 <img class="img-logo" src="../assets/logo-negro.png" />
             </a>
@@ -50,47 +49,60 @@
         </div>
     </nav>
 </section>
-<!-- CONTENEDORES-->
-  <section class="home-micuenta">
-    <div class="container contenedor1">
-        <div class="row g-4 mt-4">
-            <!-- Contenedor 1-->
-                <div class="col-6 rounded c1">
-                    <div class="border border-rounded border-danger rounded-3">
-                        <form class="row g-3 mt-3 p-4">
-                            <h1 class="titulo-c"><strong>Ingreso</strong></h1>
-                            <label class="txt-general">Si tienes una cuenta, por favor ingresa.</label>
-                            <div class="col-12">
-                                <input class="form-control" type="email" id="emailInput" placeholder="Correo Electronico">
-                            </div>
-                            <div class="col-12">
-                                <input class="form-control" type="password" id="inputPass" placeholder="Constraseña">
-                            </div>
-                            <div class="btn col-12">
-                              <button type="button" class="button-c btn btn-secondary btn-sm btn-block">Login</button>
-                            </div>
-                        </form>
+<img class="spidder img-fluid" src="../assets/arania.png" alt="spidder">
+<!-- Formulario -->
+<section class="bdy">
+        <div class="container" id="container">
+            <!-- Formulario para crear cuenta -->
+            <div class="formulario form-container sign-up-container" id>
+                <form id="formulario" class="formulario" action="#">
+                    <h3 class="titulo-seccion">Crear Cuenta</h3>
+
+                    <input id="nombre" class="entrada my-1" name="nombre" type="text" placeholder="Nombre" />
+
+                    <input id="correo" class="entrada my-1" name="correo" type="email" placeholder="Correo" />
+
+                    <input id="contraseña" class="entrada my-1" name="contraseña" type="password" placeholder="Contraseña" />
+
+                    <!-- Checkbox -->
+                    <input class="checkbox" type="checkbox" name="terminos" id="terminos"><h6 class="txt-label">Acepto los Términos y Condiciones</h6>
+                    <button type="submit" class="boton">Crear</button>
+                    <p class="warnings" id="warnings"></p>
+                </form>
+            </div>
+            
+            <!-- Formulario para iniciar sesión -->
+            <div class="formulario form-container sign-in-container">
+                <form id="formulario" class="formulario" action="#">
+                    <h3 class="titulo-seccion">Inicia Sesión</h3>
+
+                    <input id="email" class="entrada my-2" name="correo" type="email" placeholder="Correo" />
+
+                    <input id="password" class="entrada my-2" name="contraseña" type="password" placeholder="Contraseña" />
+              
+                    <a class="texto-general-link" href="#">¿Olvidaste tu contraseña?</a>
+                    <button type="button" class="boton">Ingresar</button>
+                </form>
+            </div>
+            
+            <!-- Overlay -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h3 class="titulo-seccion-2">Bienvenido de nuevo!</h3>
+                        <p class="texto-general-2">Unirse a nuestra comunidad te permite recibir informacion adicional y promociones.</p>
+                        <button type="button" class="boton-ghost" id="signIn">Inicia Sesión</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h3 class="titulo-seccion-2">¡Hola!</h3>
+                        <p class="texto-general-2">¿No tienes una cuenta? Accede aqui para registrarte.</p>
+                        <button type="button" class="boton-ghost" id="signUp">Unirse</button>
                     </div>
                 </div>
-                <!-- Contenedor 2-->
-                <div class="col-6 rounded-2 c1 d-flex">
-                  <div class="border border-danger rounded-3">
-                    <div class="row g-3 mt-3 p-4">
-                      <h1 class="titulo-c"><strong>¿Nuevo Usuario?</strong></h1>
-                      <p class="paragraph1">Registrarte es fácil, haremos una nueva cuenta para ti en instantes. Para esto sólo te pedimos la información necesaria para hacer tu proceso de compra más rápido y más sencillo.</p>
-                    </div>
-                        <div class="btn col-12">
-                          <button type="button" class="button-c btn btn-sm btn-block"><a class="link-b" href="./crear-cuenta.html">Crear</a></button>
-                        </div>
-                  </div>
             </div>
         </div>
-    </div>
-</div>
 </section>
-</div>
 <img class="gato" src="../assets/gato.png" alt="">
-</div>
 <!-- Footer -->
 <div class="container-fluid footer-bg text-center p-3">
     <a class="link-gc" href="http://" target="_blank" rel="noopener noreferrer">
@@ -100,11 +112,11 @@
     <h7 class="small texto-inferior">Awiwitch &copy; 2022. Todos los derechos reservados.</h7>
     </p>
 </div>
-<script src="../js/crear-cuenta.js"></script>
+<script src="../js/mi-cuenta.js" charset="utf-8"></script>
 <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous">
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+crossorigin="anonymous">
 </script>
 </body>
 </html>
