@@ -61,33 +61,27 @@
                 <!-- Contenedor texto -->
                 <div class="col-md-5 text-center contenedores">
                     <div class="container-sm">
-                        <p class="Poppins">Queremos saber mas sobre ti</p>
-                        <p class="Poppins">Déjanos un comentario o escribenos tus dudas.</p>
+                        <p class="Poppins1">¡Queremos saber mas sobre ti!</p>
+                        <p class="Poppins2">Déjanos un comentario o escribenos tus dudas abajo.</p>
                     </div>
                     <form class="Poppins formularios" action="https://formsubmit.co/dalejandro.cl.1910@gmail.com"
                         method="POST">
                         <div>
                             <div>
                                 <p>
-                                    <label for="nombre"> Nombre: <input type="text" id="text"
-                                            placeholder="Maria Jose Delgado Salazar" required class="form-control"
-                                            onclick="validar()" name="Nombre"></label>
+                                    <input type="text" id="text" placeholder="Nombre" required class="entrada my-1" onclick="validar()" name="Nombre"/>
                                 </p>
                                 <p>
-                                    <label for="correo">Correo electronico: <input type="email" id="email"
-                                            placeholder="majo.ds@gmail.com" required class="form-control"
-                                            onclick="validar()" name="Correo electronnico"></label>
+                                    <input type="email" id="email" placeholder="Correo electronico" required class="entrada my-1" onclick="validar()" name="Correo electronico"/>
                                 </p>
                                 <p>
-                                    <label for="telefono">Numero telefonico: <input type="number" id="number"
-                                            placeholder="656-779-9823" required class="form-control" onclick="validar()"
-                                            name="Numero telefonico"></label>
+                                    <input type="number" id="number" placeholder="Numero telefonico" required class="entrada my-1" onclick="validar()" name="Numero telefonico"/>
                                 </p>
                         <div class="mb-5">
-                            <textarea class="form-control" id="dudas" cols="40" rows="5"
+                            <textarea class="entrada my-1" id="dudas" cols="40" rows="5"
                                 placeholder="Dejanos tus dudas en este espacio" name="Duda/s"></textarea><br>
                             <!-- Botón -->
-                            <button class="btn btn-danger btn-pal" onclick="validar()" type="button submit">
+                            <button class="boton my-3 btn btn-danger btn-pal" onclick="validar()" type="button submit">
                                 Enviar
                             </button>
                             </div>
