@@ -10,8 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/contacto.css"> <!-- Estilo propio -->
-    <link rel="icon" href="../assets/logoIcon.png">
-    <!--Icono de pestana-->
+    <link rel="icon" href="../assets/logoIcon.png"> <!--Icono de pestana-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins&display=swap" rel="stylesheet">
@@ -37,9 +36,6 @@
                             <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./contacto.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="./nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
@@ -50,6 +46,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./colaboradores.html">Colaboradores</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
@@ -62,33 +61,27 @@
                 <!-- Contenedor texto -->
                 <div class="col-md-5 text-center contenedores">
                     <div class="container-sm">
-                        <p class="Poppins">Queremos saber mas sobre ti</p>
-                        <p class="Poppins">Déjanos un comentario o escribenos tus dudas.</p>
+                        <p class="Poppins1">¡Queremos saber mas sobre ti!</p>
+                        <p class="Poppins2">Déjanos un comentario o escribenos tus dudas abajo.</p>
                     </div>
                     <form class="Poppins formularios" action="https://formsubmit.co/dalejandro.cl.1910@gmail.com"
                         method="POST">
                         <div>
                             <div>
                                 <p>
-                                    <label for="nombre"> Nombre: <input type="text" id="text"
-                                            placeholder="Maria Jose Delgado Salazar" required class="form-control"
-                                            onclick="validar()" name="Nombre"></label>
+                                    <input type="text" id="text" placeholder="Nombre" required class="entrada my-1" onclick="validar()" name="Nombre"/>
                                 </p>
                                 <p>
-                                    <label for="correo">Correo electronico: <input type="email" id="email"
-                                            placeholder="majo.ds@gmail.com" required class="form-control"
-                                            onclick="validar()" name="Correo electronnico"></label>
+                                    <input type="email" id="email" placeholder="Correo electronico" required class="entrada my-1" onclick="validar()" name="Correo electronico"/>
                                 </p>
                                 <p>
-                                    <label for="telefono">Numero telefonico: <input type="number" id="number"
-                                            placeholder="656-779-9823" required class="form-control" onclick="validar()"
-                                            name="Numero telefonico"></label>
+                                    <input type="number" id="number" placeholder="Numero telefonico" required class="entrada my-1" onclick="validar()" name="Numero telefonico"/>
                                 </p>
                         <div class="mb-5">
-                            <textarea class="form-control" id="dudas" cols="40" rows="5"
+                            <textarea class="entrada my-1" id="dudas" cols="40" rows="5"
                                 placeholder="Dejanos tus dudas en este espacio" name="Duda/s"></textarea><br>
                             <!-- Botón -->
-                            <button class="btn btn-danger btn-pal" onclick="validar()" type="button submit">
+                            <button class="boton my-3 btn btn-danger btn-pal" onclick="validar()" type="button submit">
                                 Enviar
                             </button>
                             </div>
@@ -123,11 +116,13 @@
     </div>
     <footer>
         <div class="container-fluid footer-bg text-center p-3">
-            <a class="link-gc" href="./html/about.html">
-                <h6 class="small texto-inferior-link"><strong>Página creada por Green Cake. ¡CONÓCENOS!</strong></h6>
+            <a class="link-gc" href="./about.html" rel="noopener noreferrer">
+                <h7 class="small texto-inferior-link"><strong>Página creada por Green Cake. ¡CONÓCENOS!</strong></h7>
             </a>
             <p>
-            <h6 class="small texto-inferior">Awiwitch &copy; 2022. Todos los derechos reservados.</h6>
+                <a class="link-gc" href="https://www.instagram.com/awiwitch/" target="_blank">
+                    <h6 class="small texto-inferior">Awiwitch &copy; 2022. Todos los derechos reservados.</h6>
+                </a>
             </p>
         </div>
     </footer>
