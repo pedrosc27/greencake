@@ -23,12 +23,19 @@ h4{
     text-align: justify;
 }
 
+
+
+
 .containerPosition{
     position: relative;
     margin-top: 100px;
     padding-top: 200px;
-
+    
 }
+
+
+
+
 .spiderAbsolute{
     position: absolute;
     max-width: 650px;
