@@ -1,3 +1,4 @@
+
 body{
     background-color: #FBF6E2;
 }
@@ -5,6 +6,7 @@ body{
 p{
     font-family: Poppins;
     font-size: 16px;
+    text-align: center;
 }
 .txt-p{
     font-family: Poppins;
@@ -17,10 +19,20 @@ p{
     color: #4E1353;
 }
 
-h4{
+h5{
     font-family: Poppins;
     font-size: 20px;
-    text-align: justify;
+    text-align: center;
+    color: #4E1353;
+}
+
+.btn-pal {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    background-color: #C23320;
+    border-color: #C23320;
+    border-radius: 20px;
+    align-items: center;
 }
 
 
@@ -33,9 +45,42 @@ h4{
     
 }
 
+/*Resolucion para dispositivos moviles muy pequeños*/
+@media(max-width:575px){
+
+}
+/*Resolucion para dispositivos moviles pequeños*/
+@media(min-width:576px)and(max-width:767px){
+    
+}
+/*Resolucion para tablets*/
+@media(min-width:768px)and(max-width:991px){
+    
+}
+/*Resolucion para pc de escritorio*/
+@media(min-width:992px){
+    .contenedor1 {
+        width: 100vw;
+        height: 50vw;
+    }
+    
+    .contenedor2 {
+        width: 100vw;
+        height: 50vw;
+    }
+    .contenedor3 {
+        width: 100vw;
+        height: 50vw;
+    }
+
+}
 
 
 
+
+
+
+/*
 .spiderAbsolute{
     position: absolute;
     max-width: 650px;
@@ -44,13 +89,14 @@ h4{
     right: 0;
     z-index: 0;
    
-}
+}*/
+
 .paragraph-inicio{
     font-family: Poppins;
     font-size: 20px;
 }
 .insta{
-    width: 40px;
+    width: 25px;
 }
 
 .spiderwebAbsolute{
