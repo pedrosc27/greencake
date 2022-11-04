@@ -29,21 +29,65 @@ formulario2.addEventListener('submit', (e) =>{
 })
 
 
-/**REGISTRO Y CREACION DE OBJETO USUARIO */
-let usuarios = [];
+/**REGISTRO DE USUARIO - Almacenamiento local*/
+ let usuarios = [];
+ let usuario = {
+    nombre: "",
+    correo: "",
+    contraseña: ""
+};
 function registroUsuario(){
-   
-   let usuario = {
-       nombre: document.getElementById("nombre").value,
-       correo: document.getElementById("correo").value,
-       contraseña: document.getElementById("contraseña").value
+    let nombre = document.getElementById("nombre").value;
+    let correo = document.getElementById("correo").value;
+    let contraseña = document.getElementById("contraseña").value;
+    let validacion = false;
+    usuario = {
+        nombre: nombre,
+        correo: correo,
+        contraseña: contraseña
     }
-       usuarios.push(usuario);
-   
-   console.log(usuarios);
-   localStorage.setItem("usuario", JSON.stringify(usuarios));
-   //document.forms[0].reset();
+    
+    for(let i = 0; i < usuarios.length; i++){
+        if(usuarios[i].correo == usuario.correo)
+            validacion =true;
+    }
+
+    if(validacion)
+        alert("El correo ya existe");
+    else{
+        usuarios.push(usuario);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }  
+    console.log(usuarios);                                                
 }
+
+ 
+ /**
+  * INICIAR SESION - Con local storage
+  */
+ function login(){
+    let email= document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let user = localStorage.getItem('usuarios');
+    console.log(user);
+
+    let data = JSON.parse(user);
+    console.log(data);
+
+    for(let i = 0; i < data.length; i++){
+        if(data[i].correo == email && data[i].contraseña == password){
+            alert("Bienvenido");
+
+            break;
+        }else{
+            console.log(data.correo);
+            alert("Datos incorrectos");
+            break;
+        }
+    }
+ }
+ 
 
 
 /**
