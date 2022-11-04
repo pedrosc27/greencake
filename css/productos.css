@@ -162,6 +162,13 @@ h5.h5-fantasma{
 #contenedor-filtros ul li a{
     color: #fff;
 }
+.display-none{
+    display: none;
+}
+.alert-morado {
+    background-color: #4E1353;
+    color: #fff;
+}
 
 /***** FINALIZA PRODUCTOS *****/
 /***** INICIA FOOTER *****/

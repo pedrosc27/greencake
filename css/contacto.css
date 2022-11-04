@@ -36,6 +36,14 @@ body{
 	margin: 8px 0;
 	width: 80%;
 }
+.imgpastelera{
+    margin-top: 30%
+}
+@media only screen and (max-width: 768px){
+    .imgpastelera{
+        display: none;
+    }
+}
 .boton {
 	border-radius: 20px;
 	border: 1px solid #C23320;
@@ -52,6 +60,10 @@ body{
 .boton:active {
 	transform: scale(0.95);
 	color: #C23320;
+}
+.redes-icon{
+    width: 35px;
+    margin-bottom: 40px;
 }
 .back{
     background-color: #FBF6E2;
