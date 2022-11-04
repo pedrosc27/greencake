@@ -58,7 +58,7 @@
           <div class="container" id="container">
               <!-- Formulario para crear cuenta -->
               <div class="formulario form-container1 sign-up-container" id>
-                  <form id="formulario" class="formulario" action="#">
+                  <form id="formulario" class="formulario" action="#" onsubmit="registroUsuario()">
                     <div class="title"><h3 class="titulo-seccion">Crear Cuenta</h3></div>
 
                       <input id="nombre" class="entrada my-1" name="nombre" type="text" placeholder="Nombre" />
@@ -70,14 +70,14 @@
                       <input id="contraseña2" class="entrada my-1" name="contraseña2" type="password" placeholder="Confirma contraseña" />
 
                       <!-- Boton -->
-                      <button type="submit" class="boton" onclick="registroUsuario()">Crear</button>
+                      <button type="submit" class="boton">Crear</button>
                       <p class="warnings" id="warnings"></p>
                   </form>
               </div>
               
               <!-- Formulario para iniciar sesión -->
               <div class="formulario2 form-container2 sign-in-container">
-                  <form id="formulario2" class="formulario2" action="#">
+                  <form id="formulario2" class="formulario2" action="#" onsubmit="login()">
                       <h3 class="titulo-seccion">Inicia Sesión</h3>
   
                       <input id="username" class="entrada my-2" name="user" type="user" placeholder="Correo" />
