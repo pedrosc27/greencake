@@ -284,6 +284,14 @@
 	margin-top: 20px;
 	margin-bottom: -100px;
 }
+.error{
+	font-size: 10px;
+	color: #C23320;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: -100px;
+}
+
 
 /********** Footer **********/
 .footer-bg{

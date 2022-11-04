@@ -5,43 +5,45 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const button = document.getElementById('button');
 const formulario2 = document.getElementById('formulario2');
-const input = document.querySelectorAll('#formulario');
+const input = document.querySelectorAll('#formulario2');
+const parrafo2 = document.getElementById('error');
 
-button.addEventListener('click', (e)=>{
+formulario2.addEventListener('submit', (e) =>{
     e.preventDefault()
-    const data = {
-        username: username.value,
-        password: password.value
-    }  
-})
-
-formulario2.addEventListener('button', e =>{
-    e.preventDefault()
-    let warnings = ""
+    let error = ""
     let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-    let ingresar = false
-    parrafo.innerHTML = ""
+    let enter = false
+    parrafo2.innerHTML = ""
+
     if(!regexEmail.test(username.value)){
-        warnings += `El email no es válido <br>`
-        ingresar = true
+        error += `El email no es válido <br>`
+        enter = true
     }if(password.value.length <8){
-        warnings += `La contraseña no es válida <br>`
-        ingresar = true
-    }if (ingresar){
-    parrafo.innerHTML = warnings
+        error  += `La contraseña no es válida <br>`
+        enter = true
+    }if(enter){
+        parrafo2.innerHTML = error
     }else{
-        parrafo.innerHTML = "¡Bienvenido!"
+        parrafo2.innerHTML = "¡Bienvenido!"
     }
 })
 
 
-
-
-/*
- * De aqui falta enviar estos objetos generadod a la API 
-*/
-
-
+/**REGISTRO Y CREACION DE OBJETO USUARIO */
+let usuarios = [];
+function registroUsuario(){
+   
+   let usuario = {
+       nombre: document.getElementById("nombre").value,
+       correo: document.getElementById("correo").value,
+       contraseña: document.getElementById("contraseña").value
+    }
+       usuarios.push(usuario);
+   
+   console.log(usuarios);
+   localStorage.setItem("usuario", JSON.stringify(usuarios));
+   //document.forms[0].reset();
+}
 
 
 /**
@@ -55,30 +57,42 @@ formulario2.addEventListener('button', e =>{
  const contraseña2 = document.getElementById('contraseña2');
  const parrafo = document.getElementById('warnings');
  
- formulario.addEventListener('submit', e =>{
+ formulario.addEventListener('submit', (e) =>{
       e.preventDefault()
       let warnings = ""
       let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
       let entrar = false
       parrafo.innerHTML = ""
+
       if(nombre.value.length <2){
-          warnings += `El nombre no es válido <br>`
-          entrar = true
-      }
+        warnings += `El nombre no es válido <br>`
+        entrar = true
+    }
       if(!regexEmail.test(correo.value)){
-          warnings += `El email no es válido <br>`
-          entrar = true
-      }
-      if(contraseña.value.length <8){
-          warnings += `La contraseña no es válida <br>`
-          entrar = true
-     }
-      if (entrar){
+        warnings += `El email no es válido <br>`
+        entrar = true
+    }
+    if(contraseña.value.length <8){
+        warnings += `La contraseña no es válida <br>`
+        entrar = true
+    }
+    if(contraseña2.value.length <8){
+        warnings += `La contraseña no es válida <br>`
+        entrar = true
+    }
+    if(contraseña.value !== contraseña2.value){
+        warnings += `La contraseña no coincide <br>`
+        entrar = true
+    }
+    if (entrar){
           parrafo.innerHTML = warnings
-      }else{
+        }else{
           parrafo.innerHTML = "¡Bienvenido!"
-      }
-  })
+        }
+        console.log(contraseña.value)
+        console.log(contraseña2.value)
+    })
+  
  /**
   * PARA BOTONES DE SIGN IN Y SIGN UP
   */

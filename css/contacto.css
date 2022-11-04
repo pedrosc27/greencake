@@ -1,3 +1,4 @@
+/* INICIO NAVBAR */
 body{
     background-color: #FBF6E2;
 }
@@ -18,6 +19,8 @@ body{
     height: 300px;
     top: 0px;
 }
+
+/* CONTENEDORES */
 .contenedores{
     z-index: 50;
 }
@@ -32,6 +35,9 @@ body{
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 80%;
+}
+.imgpastelera{
+    margin-top: 30%;
 }
 .boton {
 	border-radius: 20px;
@@ -51,7 +57,8 @@ body{
 	color: #C23320;
 }
 .redes-icon{
-    width: 55px;
+    width: 30px;
+    margin-bottom: 40px;
 }
 .back{
     background-color: #FBF6E2;
@@ -120,4 +127,10 @@ a{
     height: 509px;
     padding-left: 1rem;
     margin-left: 1rem;
+}
+@media only screen and (max-width: 768px) {
+
+    .imgpastelera{
+        display: none;
+    }
 }
