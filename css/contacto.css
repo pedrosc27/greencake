@@ -33,6 +33,14 @@ body{
 	margin: 8px 0;
 	width: 80%;
 }
+.imgpastelera{
+    margin-top: 30%
+}
+@media only screen and (max-width: 768px){
+    .imgpastelera{
+        display: none;
+    }
+}
 .boton {
 	border-radius: 20px;
 	border: 1px solid #C23320;
@@ -51,7 +59,8 @@ body{
 	color: #C23320;
 }
 .redes-icon{
-    width: 55px;
+    width: 35px;
+    margin-bottom: 40px;
 }
 .back{
     background-color: #FBF6E2;
@@ -80,9 +89,9 @@ body{
 }
 .gato{
     position: absolute;
-    margin-left: 90%;
-    margin-top: -9%;
-    max-width: 10%;
+    margin-left: 87%;
+    margin-top: -12%;
+    max-width: 13%;
     z-index: 100;
 }
 /***** FOOTER *****/
