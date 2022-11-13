@@ -40,6 +40,9 @@ color: #000000;
   text-align: justify;
   letter-spacing: -.9px;
 }
+.hl{
+  color:#C23320;
+}
 .gato{
   position: absolute;
 margin-left: 90%;
@@ -102,6 +105,9 @@ a{
   .imgchoco2{
       display: none;
   }
+  .imgchoco1{
+    display: none;
+}
   .valores{
       display: none; 
   }

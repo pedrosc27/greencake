@@ -156,6 +156,9 @@ body{
 .Titulo1 hl{
   border: 2px solid red;
 }
+.hl{
+  color:#C23320;
+}
 .Subtitulo h4{
   display: flex; 
   justify-content:center; 
