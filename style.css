@@ -16,18 +16,25 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-.boton{
-    align-items: center;
+/***** BOTON NUEVO*****/
+.boton {
+  font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	padding: 14px 45px;
+	color: #FBF6E2;
+	border-radius: 20px;
+	border: 1px solid #C23320;
+	background-color: #C23320;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	border-color: #C23320;
 }
-
-.btn-pal{
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    background-color: #C23320;
-    border-color: #C23320;
-    border-radius: 20px;
-    align-items: center;
+.boton:active {
+	transform: scale(0.95);
 }
+/***** BOTON NUEVO*****/
 
 .texto{
     padding-left: 5%;
