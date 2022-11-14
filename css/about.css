@@ -197,3 +197,67 @@ body{
       font-size: 10px;
       align-items: center;
   }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+    .section-header{
+      font-family: 'Poppins', sans-serif;
+      padding-bottom: 25px;
+      padding-top: 25px;
+      text-align: center;
+    }
+    .bruja img{
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+    
+    .bruja {
+        animation-duration: 2s;
+        animation-name: bruja;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+    }
+    
+    @keyframes bruja {
+        from {
+          margin-top:25%;
+          width:300%
+        }
+      
+        to {
+         margin-top:0%;
+         width:100%;
+       }
+    }
+
+    .DescriptionTitle{
+        position: absolute;
+        right: -2px;
+    }
+    .proy-descrip{
+        text-align: center;
+        padding: 0px;
+    }
+    .DescriptionAbout{
+        padding-top: 150px;
+        border: 50px;
+    }
+    .DescriptionAbout p{
+        padding: 17px;
+    }
+
+  }
