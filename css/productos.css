@@ -162,17 +162,55 @@ h5.h5-fantasma{
 #contenedor-filtros ul li a{
     color: #fff;
 }
+.display-none{
+    display: none;
+}
+.alert-morado {
+    background-color: #4E1353;
+    color: #fff;
+}
 
 /***** FINALIZA PRODUCTOS *****/
-/***** INICIA FOOTER *****/
+/********************************************** FOOTER ****/
 .footer-bg{
     background-color: #4E1353;
+    padding: 1em 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+a{
+  text-decoration: none;
 }
 .link-gc:link {
-    color: #FBF6E2;
+  color: #FBF6E2;
 }
-
-
+.link-gc:hover {
+    border-bottom: 1px solid;
+    background: #4E1353;
+    border-radius: 2px;
+}
+.link-gc:visited {
+  color: #FBF6E2;
+}
+.texto-inferior-link{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 11px;
+    align-items: center;
+}
+.texto-inferior{
+    color:#FBF6E2 ;
+    font-family: 'Poppins';
+    font-size: 10px;
+    align-items: center;
+}
+.vl {
+    border-left: 3px solid #4E1353;
+    height: 509px;
+    padding-left: 1rem;
+    margin-left: 1rem;
+}
 /***** FINALIZA FOOTER *****/
 
 @media only screen and (max-width: 768px) {

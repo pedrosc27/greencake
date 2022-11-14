@@ -20,7 +20,7 @@
     <section class="section-nav">
         <nav class="navbar navbar-expand-lg static-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../index.html">
                     <img class="img-logo" src="../assets/logo-negro.png" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -62,66 +62,78 @@
                     <img class="img-fluid fantasma-filtros" src="../assets/pastel1.png" alt="">
                 </div>
                 <div class="col-12 col-sm-5 col-m-5 padding-filtro" id="padding-content-product">
-                    <div class="contenedor-filtros">
-                        <h3> Pastel Star Wars</h3>
-                        <p>Delicioso Pastel de Star Wars, puedes elegir entre una gran variedad de tamaños, sabores y rellenos</p>
-                        <p>Producto disponible para recoger en Tienda</p>
-
-                        <h5>Elige los ingredientes de tu Pastel</h5>
-                        <div>
-                            <div class="contenedor-select">
-                                <h6>Tamaño: </h6>
-                                <select class="form-select" aria-label="Default select example">
-
-                                    <option value="1">Mini</option>
-                                    <option value="2">Chico</option>
-                                    <option value="3">Mediano</option>
-                                    <option value="3">Grande</option>
-                                </select>
+                    <form >
+                        <div class="contenedor-filtros">
+                            <h3> Pastel Star Wars</h3>
+                            <p>Delicioso Pastel de Star Wars, puedes elegir entre una gran variedad de tamaños, sabores y rellenos</p>
+                            <p>Producto disponible para recoger en Tienda</p>
+    
+                            <h5>Elige los ingredientes de tu Pastel</h5>
+                            <div>
+                                <div class="contenedor-select">
+                                    <h6>Tamaño: </h6>
+                                    <select class="form-select" aria-label="Default select example" id="tamano">
+                                        <option value="Mini">Mini</option>
+                                        <option value="Chico">Chico</option>
+                                        <option value="Mediano">Mediano</option>
+                                        <option value="Grande">Grande</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="contenedor-select">
-                                <h6>Bizcocho: </h6>
-                                <select class="form-select" aria-label="Default select example">
-
-                                    <option value="1">Vainilla</option>
-                                    <option value="2">Platano</option>
-                                    <option value="3">Naranja</option>
-                                    <option value="3">Red velvet</option>
-                                    <option value="3">Pumpkin spice</option>
-                                </select>
+                            <div>
+                                <div class="contenedor-select">
+                                    <h6>Bizcocho: </h6>
+                                    <select class="form-select" aria-label="Default select example" id="bizcocho">
+    
+                                        <option value="Vainilla">Vainilla</option>
+                                        <option value="Platano">Platano</option>
+                                        <option value="Naranja">Naranja</option>
+                                        <option value="Red Velvet">Red velvet</option>
+                                        <option value="Pumpkin spice">Pumpkin spice</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="contenedor-select">
-                                <h6>Relleno: </h6>
-                                <select class="form-select" aria-label="Default select example">
-
-                                    <option value="1">Fresas</option>
-                                    <option value="2">Nutella</option>
-                                    <option value="3">Peanut</option>
-                                    <option value="3">Queso Crema</option>
-                                    <option value="3">Dulce de Leche</option>
-                                    <option value="3">Ganache de Chocolate</option>
-                                </select>
+                            <div>
+                                <div class="contenedor-select">
+                                    <h6>Relleno: </h6>
+                                    <select class="form-select" aria-label="Default select example" id="relleno">
+    
+                                        <option value="Fresas">Fresas</option>
+                                        <option value="Nutella">Nutella</option>
+                                        <option value="Peanut">Peanut</option>
+                                        <option value="Queso Crema">Queso Crema</option>
+                                        <option value="Dulce de Leche">Dulce de Leche</option>
+                                        <option value="Ganache de Chocolate">Ganache de Chocolate</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="contenedor-select">
-                                <h6>Figura: </h6>
-                                <select class="form-select" aria-label="Default select example">
-
-                                    <option value="1">Darth Vader</option>
-                                    <option value="2">Han Solo</option>
-                                    <option value="3">Yoda</option>
-                                    <option value="3">Grogu</option>
-                                    <option value="3">Rey</option>
-                                </select>
+                            <div>
+                                <div class="contenedor-select">
+                                    <h6>Figura: </h6>
+                                    <select class="form-select" aria-label="Default select example" id="figura">
+    
+                                        <option value="Darth Vader">Darth Vader</option>
+                                        <option value="Han Solo">Han Solo</option>
+                                        <option value="Yoda">Yoda</option>
+                                        <option value="Grogu">Grogu</option>
+                                        <option value="Rey">Rey</option>
+                                    </select>
+                                </div>
                             </div>
+                           
+                            <button type="button" class="btn btn-danger btn-pal" onclick="guardarProducto()">Comprar Ahora</button>
+                            <div class="alert alert-success" id="passwordsNoMatchRegister" role="alert" style="display:none;" >Message of the Alert</div>
+
+                            <div class="alert alert-morado  fade hide display-none" role="alert" id="buttonAlert">
+                                <strong>¡Has comprado el pastel!. </strong> Pronto recibiras un mensaje con la información de tu pedido.
+                                <button type="button"  onclick="cerrar()" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                         </div>
+                            
                         </div>
-                        <a class="btn btn-danger btn-pal" href="html/productos.html">Comprar Ahora</a>
-                    </div>
+                    </form>
+
 
                 </div>
 
@@ -131,8 +143,10 @@
     </section>
 
 
+   <!--Footer-->
+   <footer>
     <div class="container-fluid footer-bg text-center p-3">
-        <a class="link-gc" href="./about.html" rel="noopener noreferrer">
+          <a class="link-gc" href="./html/about.html" rel="noopener noreferrer">
             <h7 class="small texto-inferior-link"><strong>Página creada por Green Cake. ¡CONÓCENOS!</strong></h7>
         </a>
         <p>
@@ -141,9 +155,10 @@
             </a>
         </p>
     </div>
+  </footer>
 
-    <script src="./script.js"></script>
-    <script src="../js/productos.js"></script>
+
+    <script src="../js/producto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
         </script>
