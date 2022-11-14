@@ -432,4 +432,22 @@ a{
 
 
   }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+
+  }
 /***** FINALIZA MEDIA QUERYS *****/

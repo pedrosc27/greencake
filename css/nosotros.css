@@ -23,7 +23,7 @@ body{
 /***** FINALIZA NAV *****/
 /***** CONTENIDO *****/
 .contene1{
-  margin-top: 230px;
+  margin-top: 240px;
 }
 
 h4{
@@ -87,6 +87,7 @@ a{
   margin-left: 1rem;
 }
 
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .section-nav{
@@ -113,6 +114,9 @@ a{
   }
   .txtvalores{
       display: none; 
+  }
+  .hl{
+    display: none; 
   }
 
 }

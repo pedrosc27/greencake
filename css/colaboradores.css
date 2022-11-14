@@ -1,4 +1,3 @@
-/**************** NAVBAR **/
 .img-logo{
     height: 100px;
 }
@@ -11,16 +10,18 @@
     background-size: cover;
     position: absolute;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
     background-position-x: center;
     height: 300px;
     top: 0px;
 }
+/*************finaliza navbar **/
+
 body{
     background-color: #FBF6E2;
 }
-
 /************* **/
+
 .tarjetas{
     margin-top: 10px;
     margin-bottom: 150px;
@@ -186,8 +187,34 @@ a{
 }
 
 @media only screen and (max-width: 768px) { 
+    .section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
     /* For mobile tablets: */
     .spiderwebAbsolute{
         display: none;
     }
+    .paragraph-inicio{
+        font-family: Poppins;
+        font-size: 15px;
+        text-align: justify;
+        padding: 20px;
+    }
+    .tarjetas{
+        padding:20px;
+    }
+    .title{
+        font-size: 33px; 
+    }
   }
+ 
