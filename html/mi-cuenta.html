@@ -58,16 +58,16 @@
           <div class="container" id="container">
               <!-- Formulario para crear cuenta -->
               <div class="formulario form-container1 sign-up-container" id>
-                  <form id="formulario" class="formulario" action="#" onsubmit="registroUsuario()">
+                  <form id="formulario" class="formulario" action="#">
                     <div class="title"><h3 class="titulo-seccion">Crear Cuenta</h3></div>
 
-                      <input id="nombre" class="entrada my-1" name="nombre" type="text" placeholder="Nombre" />
+                      <input id="nombre" class="entrada my-1" name="nombre" type="text" onkeypress="return check(event)" placeholder="Nombre" required/>
 
-                      <input id="correo" class="entrada my-1" name="correo" type="email" placeholder="Correo"/>
+                      <input id="correo" class="entrada my-1" name="correo" type="email" placeholder="Correo" required/>
 
-                      <input id="contraseña" class="entrada my-1" name="contraseña" type="password" placeholder="Contraseña" />
+                      <input id="contraseña" class="entrada my-1" name="contraseña" type="password" placeholder="Contraseña" required/>
 
-                      <input id="contraseña2" class="entrada my-1" name="contraseña2" type="password" placeholder="Confirma contraseña" />
+                      <input id="contraseña2" class="entrada my-1" name="contraseña2" type="password" placeholder="Confirma contraseña" required/>
 
                       <!-- Boton -->
                       <button type="submit" class="boton">Crear</button>
@@ -77,12 +77,12 @@
               
               <!-- Formulario para iniciar sesión -->
               <div class="formulario2 form-container2 sign-in-container">
-                  <form id="formulario2" class="formulario2" action="#" onsubmit="login()">
+                  <form id="formulario2" class="formulario2" action="#">
                       <h3 class="titulo-seccion">Inicia Sesión</h3>
   
-                      <input id="username" class="entrada my-2" name="user" type="user" placeholder="Correo" />
+                      <input id="username" class="entrada my-2" name="user" type="user" placeholder="Correo" required/>
 
-                      <input id="password" class="entrada my-2" name="password" type="password" placeholder="Contraseña" />
+                      <input id="password" class="entrada my-2" name="password" type="password" placeholder="Contraseña" required/>
 
                       <a class="texto-general-link" href="#">¿Olvidaste tu contraseña?</a>
                       <button type="submit" class="boton">Ingresar</button>

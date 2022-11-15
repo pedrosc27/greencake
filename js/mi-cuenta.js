@@ -1,3 +1,56 @@
+function check(e) {
+    tecla = (document.getElementById('nombre')) ? e.keyCode : e.which;
+    // Patrón de entrada, en este caso solo acepta letras
+    patron = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+/**
+ * CREAR CUENTA falta la confirmacion de contraseña.
+ */
+ const formulario = document.getElementById('formulario');
+ const inputs = document.querySelectorAll('#formulario');
+ const nombre = document.getElementById('nombre');
+ const correo = document.getElementById('correo');
+ const contraseña = document.getElementById('contraseña');
+ const contraseña2 = document.getElementById('contraseña2');
+ const parrafo = document.getElementById('warnings');
+
+ formulario.addEventListener('submit', (e) =>{
+      e.preventDefault()
+      let warnings = "";
+      let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+      let entrar = false;
+      parrafo.innerHTML = "";
+
+      if(nombre.value.length <2){
+        warnings += `El nombre no es válido <br>`
+        entrar = true
+    }
+      if(!regexEmail.test(correo.value)){
+        warnings += `El email no es válido <br>`
+        entrar = true
+    }
+    if(contraseña.value.length <8){
+        warnings += `La contraseña no es válida <br>`
+        entrar = true
+    }
+    if(contraseña.value !== contraseña2.value){
+        warnings += `La contraseña no coincide <br>`
+        entrar = true
+    }
+    if (entrar){
+          parrafo.innerHTML = warnings;
+          formulario.reset();
+        }else{
+          parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
+          registroUsuario();
+          formulario.reset();
+        }
+        console.log(contraseña.value)
+        console.log(contraseña2.value)
+    })
+
 /**
  * INICIAR SESION
  */
@@ -16,15 +69,21 @@ formulario2.addEventListener('submit', (e) =>{
     parrafo2.innerHTML = ""
 
     if(!regexEmail.test(username.value)){
-        error += `El email no es válido <br>`
+        error += `El email no es válido <br>`;
         enter = true
     }if(password.value.length <8){
-        error  += `La contraseña no es válida <br>`
+        error  += `La contraseña no es válida <br>`;
         enter = true
     }if(enter){
-        parrafo2.innerHTML = error
+        parrafo2.innerHTML = error;
     }else{
-        parrafo2.innerHTML = "¡Bienvenido!"
+        if(login()){
+            parrafo2.innerHTML = "¡Bienvenido!";
+            window.location.href = "../index.html";
+        }else{
+            parrafo2.innerHTML = "Usuario o contraseña incorrecto <br>";
+        }
+        
     }
 })
 
@@ -66,76 +125,31 @@ function registroUsuario(){
   * INICIAR SESION - Con local storage
   */
  function login(){
-    let email= document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    const email= document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
     let user = localStorage.getItem('usuarios');
     console.log(user);
 
     let data = JSON.parse(user);
     console.log(data);
+    let validacionData = false;
 
     for(let i = 0; i < data.length; i++){
         if(data[i].correo == email && data[i].contraseña == password){
-            alert("Bienvenido");
-
+            validacionData = true;
             break;
         }else{
             console.log(data.correo);
-            alert("Datos incorrectos");
             break;
         }
     }
+    return validacionData;
  }
  
 
 
-/**
- * CREAR CUENTA
- */
- const formulario = document.getElementById('formulario');
- const inputs = document.querySelectorAll('#formulario');
- const nombre = document.getElementById('nombre');
- const correo = document.getElementById('correo');
- const contraseña = document.getElementById('contraseña');
- const contraseña2 = document.getElementById('contraseña2');
- const parrafo = document.getElementById('warnings');
- 
- formulario.addEventListener('submit', (e) =>{
-      e.preventDefault()
-      let warnings = ""
-      let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-      let entrar = false
-      parrafo.innerHTML = ""
 
-      if(nombre.value.length <2){
-        warnings += `El nombre no es válido <br>`
-        entrar = true
-    }
-      if(!regexEmail.test(correo.value)){
-        warnings += `El email no es válido <br>`
-        entrar = true
-    }
-    if(contraseña.value.length <8){
-        warnings += `La contraseña no es válida <br>`
-        entrar = true
-    }
-    if(contraseña2.value.length <8){
-        warnings += `La contraseña no es válida <br>`
-        entrar = true
-    }
-    if(contraseña.value !== contraseña2.value){
-        warnings += `La contraseña no coincide <br>`
-        entrar = true
-    }
-    if (entrar){
-          parrafo.innerHTML = warnings
-        }else{
-          parrafo.innerHTML = "¡Bienvenido!"
-        }
-        console.log(contraseña.value)
-        console.log(contraseña2.value)
-    })
   
  /**
   * PARA BOTONES DE SIGN IN Y SIGN UP
