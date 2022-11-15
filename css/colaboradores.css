@@ -15,6 +15,10 @@
     height: 300px;
     top: 0px;
 }
+
+.navbar-color{
+    background-color: #F8BD49;
+  }
 /*************finaliza navbar **/
 
 body{
@@ -76,6 +80,7 @@ h5{
 	transition: transform 80ms ease-in;
 	border-color: #C23320;
 }
+
 .boton:active {
 	transform: scale(0.95);
 	color: #C23320;
