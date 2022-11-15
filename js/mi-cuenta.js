@@ -91,7 +91,7 @@ function registroUsuario(){
 
 
 /**
- * CREAR CUENTA falta la confirmacion de contraseña.
+ * CREAR CUENTA
  */
  const formulario = document.getElementById('formulario');
  const inputs = document.querySelectorAll('#formulario');

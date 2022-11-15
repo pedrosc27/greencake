@@ -2,11 +2,30 @@
 body{
     background-color:#FBF6E2 ;   
 }
+/***** NAVBAR *****/
+
+.img-logo{
+  height: 100px;
+}
+.navbar-nav a{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+.section-nav{
+  background-image: url(../assets/images/mel-t01.png);
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background-position-x: center;
+  height: 300px;
+  top: 0px;
+}
 .fondomorado{
     background-color:#F8BD49 ;
     background-image: url("assets/nube.png");
     position: relative; 
-    margin-top: 105px;
+    margin-top: 126px;
     padding-top: 10px;
 }
 
@@ -60,33 +79,13 @@ body{
 }
 
 .luna{
-    width: 398px;
+    width: 450px;
     position: absolute;
-    bottom: -300px;
-    right: 10px;
+    bottom: -340px;
+    right: 10px
 }
 .boton-slider {
     text-align: center;
-}
-
-/***** NAVBAR *****/
-
-.img-logo{
-    height: 100px;
-}
-.navbar-nav a{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-}
-.section-nav{
-    background-image: url(../assets/images/mel-t01.png);
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-    background-position-x: center;
-    height: 300px;
-    top: 0px;
 }
 
 /***** SegundaParte inicio *****/
@@ -109,17 +108,16 @@ body{
   }
   .arania1{
     position: absolute;
-    margin-left: 8em;
+    margin-left: -1em;
     margin-top: auto;
-    max-width: 8%;
+    max-width: 7%;
     z-index: 100;
-    margin-top: auto;
   }
   .arania2{
     position: absolute;
-    margin-left: 25em;
+    margin-left: 20em;
     margin-top: auto;
-    max-width: 11%;
+    max-width: 9%;
     z-index: 100;
   }
   .img-subcat{
@@ -153,6 +151,7 @@ body{
   margin-left: 1rem;
   margin-right: 1rem;
   word-wrap: break-word;
+  
 
 }
 .Titulo1 hl{
