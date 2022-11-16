@@ -68,11 +68,76 @@ div#body{
 
 }
 
-@media (max-width:629px) {
+/* Para PC */
+@media (width:621px) {
   img#hideImage {
     display: none;
+  
+  }
+  p#moveText{
+    padding-right: 3rem;
+  }
+  .section-nav{
+    background-image: none;
+    background-color: #F8BD49;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-position-x: center;
+    height: 106px;
+    top: 0px;
+  }
+  
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+}
+
+/*Resolucion para dispositivos moviles muy pequeños*/
+@media(max-width:912px){
+  img#hideImage {
+    display:none;
+  }
+  p#moveText{
+    padding-right: 3rem;
+
+  }
+  .section-nav{
+    background-image: none;
+    background-color: #F8BD49;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-position-x: center;
+    height: 106px;
+    top: 0px;
+  }
+  
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+  
+}
+/*Resolucion para dispositivos moviles pequeños*/
+@media(min-width:576px)and(max-width:767px){
+  
+    img#hideImage {
+      display:none;
+    }
+
+}
+
+/*Resolucion para tablets*/
+@media(min-width:758px)and(max-width:1180px){
+  img#hideImage {
+    display:none;
+  }
+  p#moveText{
+    padding-right: 90rem;
+    
   }
 }
+
 
 .container2{
   background-color: rgb(213, 45, 135);
@@ -94,9 +159,10 @@ background-color: aqua;
 }
 
 .ultimo{
-   background-color: darkgreen;
+  background-color: darkgreen;
 
 }
+
 
 /********************************************** FOOTER ****/
 .footer-bg{
@@ -106,11 +172,12 @@ background-color: aqua;
   position: relative;
   bottom: 0;
 }
+
 a{
-text-decoration: none;
+  text-decoration: none;
 }
 .link-gc:link {
-color: #FBF6E2;
+  color: #FBF6E2;
 }
 .link-gc:hover {
   border-bottom: 1px solid;
@@ -118,7 +185,7 @@ color: #FBF6E2;
   border-radius: 2px;
 }
 .link-gc:visited {
-color: #FBF6E2;
+  color: #FBF6E2;
 }
 .texto-inferior-link{
   color:#FBF6E2 ;
@@ -138,3 +205,4 @@ color: #FBF6E2;
   padding-left: 1rem;
   margin-left: 1rem;
 }
+
