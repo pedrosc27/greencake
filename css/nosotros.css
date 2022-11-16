@@ -26,7 +26,12 @@ body {
   font-family: 'Poppins', sans-serif;
 
 }
-
+.titulos{
+  text-align: center;
+  font-family: 'Creepster';
+  font-size: 34px;
+  color: #4E1353;
+}
 div#body{
   width: 1000px;
 }
@@ -34,22 +39,25 @@ div#body{
 .contenedor {
   margin: auto;
   border: 200px;
-
-  
   background-color: #000000;
-  
-  
-
   font-family: 'Abril Fatface', cursive;
   font-family: 'Creepster', cursive;
   font-family: 'Poppins', sans-serif;
 
 }
 
+.container-ppal{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.parrafo{
+  text-align: justify;
+}
 .container7 {
   display: flex;
   align-items: center;
-  justify-content: left;
+  text-align: justify;
 
 }
 
@@ -66,76 +74,6 @@ div#body{
   float: left;
 
 
-}
-
-/* Para PC */
-@media (width:621px) {
-  img#hideImage {
-    display: none;
-  
-  }
-  p#moveText{
-    padding-right: 3rem;
-  }
-  .section-nav{
-    background-image: none;
-    background-color: #F8BD49;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-    background-position-x: center;
-    height: 106px;
-    top: 0px;
-  }
-  
-    .section-nav .navbar-expand-lg{
-        background-color: #F8BD49;
-    }
-}
-
-/*Resolucion para dispositivos moviles muy pequeños*/
-@media(max-width:912px){
-  img#hideImage {
-    display:none;
-  }
-  p#moveText{
-    padding-right: 3rem;
-
-  }
-  .section-nav{
-    background-image: none;
-    background-color: #F8BD49;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-    background-position-x: center;
-    height: 106px;
-    top: 0px;
-  }
-  
-    .section-nav .navbar-expand-lg{
-        background-color: #F8BD49;
-    }
-  
-}
-/*Resolucion para dispositivos moviles pequeños*/
-@media(min-width:576px)and(max-width:767px){
-  
-    img#hideImage {
-      display:none;
-    }
-
-}
-
-/*Resolucion para tablets*/
-@media(min-width:758px)and(max-width:1180px){
-  img#hideImage {
-    display:none;
-  }
-  p#moveText{
-    padding-right: 90rem;
-    
-  }
 }
 
 
@@ -204,5 +142,73 @@ a{
   height: 509px;
   padding-left: 1rem;
   margin-left: 1rem;
+}
+
+/* Para PC */
+@media (width:621px) {
+  img#hideImage {
+    display: none;
+  
+  }
+  p#moveText{
+    padding-right: 3rem;
+  }
+  .section-nav{
+    background-image: none;
+    background-color: #F8BD49;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-position-x: center;
+    height: 106px;
+    top: 0px;
+  }
+  
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+}
+
+/*Resolucion para dispositivos moviles muy pequeños*/
+@media (max-width:912px){
+  img#hideImage {
+    display:none;
+  }
+  .container7{
+    display: block;
+    text-align: justify;
+  }
+  p#moveText{
+    padding-right: 3rem;
+
+  }
+  .section-nav{
+    background-image: none;
+    background-color: #F8BD49;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    background-position-x: center;
+    height: 106px;
+    top: 0px;
+  }
+  
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+  
+}
+/*Resolucion para dispositivos moviles pequeños*/
+@media(min-width:576px)and(max-width:767px){
+  
+    img#hideImage {
+      display:none;
+    }
+    .container7{
+      display: block;
+      padding-left: 10x;
+      padding-right: 10px;
+      text-align: justify;
+    }
 }
 
