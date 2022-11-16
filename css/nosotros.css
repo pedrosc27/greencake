@@ -99,15 +99,19 @@ div#body{
     display:none;
   }
   p#moveText{
-    padding-right: 3rem;
+    padding-right: 10%;
+    
+    
 
   }
-
   .container7{
     display:block;
     text-align: justify;
     padding-left: 10%;
   }
+
+}
+  
   .section-nav{
     background-image: none;
     background-color: #F8BD49;
@@ -123,7 +127,7 @@ div#body{
         background-color: #F8BD49;
     }
   
-}
+
 /*Resolucion para dispositivos moviles pequeños*/
 @media(min-width:576px)and(max-width:767px){
   
@@ -145,7 +149,7 @@ div#body{
     display:none;
   }
   p#moveText{
-    padding-right: 90rem;
+    padding:10%;
     
   }
 
