@@ -1,7 +1,4 @@
-/* INICIO NAVBAR */
-body{
-    background-color: #FBF6E2;
-}
+/***** INICIO NAVBAR *****/
 .img-logo{
     height: 100px;
 }
@@ -14,12 +11,11 @@ body{
     background-size: cover;
     position: absolute;
     width: 100%;
-    z-index: 100;
+    z-index: 1;
     background-position-x: center;
     height: 300px;
     top: 0px;
 }
-
 /* CONTENEDORES */
 .contenedores{
     z-index: 50;
@@ -133,4 +129,150 @@ a{
     height: 509px;
     padding-left: 1rem;
     margin-left: 1rem;
+}
+/***** INICIA MEDIA QUERY  *****/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+	.section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 3;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+	.arania1{
+		display: none;
+	}
+	#container{
+		min-height: 800px;
+	}
+	.sign-up-container {
+		left: 0;
+		width: 100%;
+		opacity: 1;
+		height: 50%;
+		z-index: 1;
+		transform: translateX(-100%);
+	}
+	.sign-in-container {
+		left: 0;
+		width: 100%;
+		z-index: 2;
+		height: 50%;
+	}
+	.formulario {
+		background-color: #FBF6E2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 50px;
+		height: 50%;
+		text-align: center;
+	}
+	.overlay-container {
+		position: absolute;
+		top: 50%;
+		left: 0%;
+		width: 200%;
+		height: 50%;
+		overflow: hidden;
+		transition: transform 0.6s ease-in-out;
+		z-index: 100;
+	}
+	.overlay {
+		background: #FBF6E2;
+		background: #4E1353;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0 0;
+		color: black;
+		position: relative;
+		left: 0%;
+		height: 100%;
+		width: 100%;
+		transform: translateX(0);
+		transition: transform 0.6s ease-in-out;
+	}
+	.overlay .overlay-left {
+		transform: translateX(100%);
+	}
+	.overlay-panel {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 0 40px;
+		text-align: center;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		transform: translateX(0);
+		transition: transform 0.6s ease-in-out;
+	}
+	.overlay-right {
+		left: 0;
+		transform: translateX(0);
+	}
+	.container.right-panel-active .overlay-left {
+		transform: translateX(0%);
+	}
+	.container.right-panel-active .sign-up-container {
+		transform: translateX(0%);
+		opacity: 1;
+		z-index: 5;
+		animation: none;
+	}
+	.container.right-panel-active .overlay-container {
+		transform: translateX(0%);
+	}
+	.container.right-panel-active .overlay {
+		transform: translateX(0%);
+	}
+	.container.right-panel-active .overlay-right {
+		transform: translateX(-100%);
+	}
+}
+@media only screen and (max-width: 820px) {
+	.section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 101;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+	.arania1{
+		display: none;
+	}
+}	
+@media only screen and (max-height: 390px) {
+	.section-nav{
+        background-image: none;
+        background-color: #F8BD49;
+        position: absolute;
+        width: 100%;
+        z-index: 101;
+        background-position-x: center;
+        height: 106px;
+        top: 0px;
+    }
+    .section-nav .navbar-expand-lg{
+        background-color: #F8BD49;
+    }
+	.arania1{
+		display: none;
+	}
 }
