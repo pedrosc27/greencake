@@ -17,7 +17,7 @@ addItem({
 
 addItem({
     'name': 'Pastel 2',
-    'img': 'spooky2.png',
+    'img': 'spooky2.jpg',
     'color': 'morado'
 });
 addItem({
@@ -39,7 +39,7 @@ addItem({
 
 addItem({
     'name': 'Pastel 6',
-    'img': 'spooky2.png',
+    'img': 'spooky2.jpg',
     'color': 'morado'
 });
 addItem({
@@ -61,7 +61,7 @@ addItem({
 
 addItem({
     'name': 'Pastel 10',
-    'img': 'spooky2.png',
+    'img': 'spooky2.jpg',
     'color': 'morado'
 });
 addItem({
