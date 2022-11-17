@@ -125,6 +125,18 @@ div#body{
 
 }
 
+@media(max-width:1279px){
+  p#textTablet {
+    text-align: center;
+  }
+}
+
+@media(min-width:1280px){  
+  p#textTablet {
+    text-align: center;
+    padding-left: 3%;
+  }
+}
 /*Resolucion para tablets*/
 @media(min-width:758px)and(max-width:1180px){
   img#hideImage {
