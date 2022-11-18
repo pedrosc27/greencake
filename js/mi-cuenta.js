@@ -16,7 +16,7 @@ function check(e) {
  const contraseña2 = document.getElementById('contraseña2');
  const parrafo = document.getElementById('warnings');
 
- formulario.addEventListener('submit', (e) =>{
+ formulario.addEventListener('submit', async(e) =>{
       e.preventDefault()
       let warnings = "";
       let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
@@ -24,28 +24,31 @@ function check(e) {
       parrafo.innerHTML = "";
 
       if(nombre.value.length <2){
-        warnings += `El nombre no es válido <br>`
+        warnings = `El nombre no es válido <br>`
         entrar = true
     }
       if(!regexEmail.test(correo.value)){
-        warnings += `El email no es válido <br>`
+        warnings = `El email no es válido <br>`
         entrar = true
     }
     if(contraseña.value.length <8){
-        warnings += `La contraseña no es válida <br>`
+        warnings = `La contraseña no es válida <br>`
         entrar = true
     }
     if(contraseña.value !== contraseña2.value){
-        warnings += `La contraseña no coincide <br>`
+        warnings = `La contraseña no coincide <br>`
         entrar = true
     }
     if (entrar){
           parrafo.innerHTML = warnings;
           formulario.reset();
         }else{
-          parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
-          registroUsuario();
-          formulario.reset();
+            if(await registroUsuario()){
+                parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
+                await registroUsuario();
+                formulario.reset();
+            }else
+                parrafo.innerHTML = "El correo ya existe";
         }
         console.log(contraseña.value)
         console.log(contraseña2.value)
@@ -61,7 +64,7 @@ const formulario2 = document.getElementById('formulario2');
 const input = document.querySelectorAll('#formulario2');
 const parrafo2 = document.getElementById('error');
 
-formulario2.addEventListener('submit', (e) =>{
+formulario2.addEventListener('submit', async(e) =>{
     e.preventDefault()
     let error = ""
     let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
@@ -77,7 +80,7 @@ formulario2.addEventListener('submit', (e) =>{
     }if(enter){
         parrafo2.innerHTML = error;
     }else{
-        if(login()){
+        if(await login()){
             parrafo2.innerHTML = "¡Bienvenido!";
             window.location.href = "../index.html";
         }else{
@@ -95,17 +98,20 @@ formulario2.addEventListener('submit', (e) =>{
     correo: "",
     contraseña: ""
 };
-function registroUsuario(){
-    let nombre = document.getElementById("nombre").value;
-    let correo = document.getElementById("correo").value;
-    let contraseña = document.getElementById("contraseña").value;
+
+let nombre1 = document.getElementById("nombre").value;
+let correo1 = document.getElementById("correo").value;
+let contraseña1 = document.getElementById("contraseña").value;
+async function registroUsuario(){
+    
     let validacion = false;
     usuario = {
         nombre: nombre,
         correo: correo,
         contraseña: contraseña
     }
-    
+    fetchRegisterStatus();
+    /*
     for(let i = 0; i < usuarios.length; i++){
         if(usuarios[i].correo == usuario.correo)
             validacion =true;
@@ -116,23 +122,71 @@ function registroUsuario(){
     else{
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    }  
-    console.log(usuarios);                                                
+        let data = await fetchRegisterStatus();
+        console.log(data);
+        } 
+        */                                     
 }
+
+
+async function fetchRegisterStatus() {
+    try{
+        let response = await fetch('http://localhost:8080/api/usuario/register', {
+            method: 'POST',
+            headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({  
+            "nombre_usuario": nombre1,
+            "email": correo1,
+            "password": contraseña1,
+            "isActive": true
+            })
+        });
+        if (!response.ok) {
+            const message = `An error has occured: ${response.status}`;
+            throw {message: message, status: response.status};
+        }
+            const registerUser = await response.json();
+            console.log(registerUser);
+            return registerUser;
+        }catch (error) {
+            console.error('There has been a problem with your fetch operation:', error.message);
+            if(error.status === 400){
+                console.log("El correo ya existe");
+        }
+    }
+}
+  
 
  
  /**
   * INICIAR SESION - Con local storage
   */
- function login(){
+async function login(){
     const email= document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
+    let respuest = await fetch('http://localhost:8080/api/usuario/login', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ 
+            "email": email,
+            "password": password
+         })
+        })
+        console.log(respuest);
+
+
     let user = localStorage.getItem('usuarios');
-    console.log(user);
+    
 
     let data = JSON.parse(user);
-    console.log(data);
+    
     let validacionData = false;
 
     for(let i = 0; i < data.length; i++){
