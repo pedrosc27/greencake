@@ -1,5 +1,5 @@
 const queryString = window.location.search;
-let baseUrl = "http://localhost:8080/api/producto/id?id=";
+let baseUrl = "https://awiwitch-greencake.herokuapp.com/api/producto/id?id=";
 let id = getAllUrlParams(queryString).id; 
 let  url = baseUrl + id;
 console.log(url);

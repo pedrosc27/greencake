@@ -43,12 +43,14 @@ function check(e) {
           parrafo.innerHTML = warnings;
           formulario.reset();
         }else{
+            await fetchRegisterStatus();
+
             if(await registroUsuario()){
                 parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
                 await registroUsuario();
                 formulario.reset();
             }else
-                parrafo.innerHTML = "El correo ya existe";
+                parrafo.innerHTML = "Bienvenido, ya puedes iniciar sesión";
         }
         console.log(contraseña.value)
         console.log(contraseña2.value)
@@ -80,13 +82,7 @@ formulario2.addEventListener('submit', async(e) =>{
     }if(enter){
         parrafo2.innerHTML = error;
     }else{
-        if(await login()){
-            parrafo2.innerHTML = "¡Bienvenido!";
-            window.location.href = "../index.html";
-        }else{
-            parrafo2.innerHTML = "Usuario o contraseña incorrecto <br>";
-        }
-        
+        await login();
     }
 })
 
@@ -102,6 +98,7 @@ formulario2.addEventListener('submit', async(e) =>{
 let nombre1 = document.getElementById("nombre").value;
 let correo1 = document.getElementById("correo").value;
 let contraseña1 = document.getElementById("contraseña").value;
+
 async function registroUsuario(){
     
     let validacion = false;
@@ -110,7 +107,7 @@ async function registroUsuario(){
         correo: correo,
         contraseña: contraseña
     }
-    fetchRegisterStatus();
+    await fetchRegisterStatus();
     /*
     for(let i = 0; i < usuarios.length; i++){
         if(usuarios[i].correo == usuario.correo)
@@ -125,17 +122,17 @@ async function registroUsuario(){
         let data = await fetchRegisterStatus();
         console.log(data);
         } 
-        */                                     
+        */                                    
 }
 
 
 async function fetchRegisterStatus() {
     try{
-        let response = await fetch('http://localhost:8080/api/usuario/register', {
+        let response = await fetch('https://awiwitch-greencake.herokuapp.com/api/usuario/register', {
             method: 'POST',
             headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({  
             "nombre_usuario": nombre1,
@@ -144,17 +141,23 @@ async function fetchRegisterStatus() {
             "isActive": true
             })
         });
-        if (!response.ok) {
+        console.log(response);
+        parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
+        if (response.status!=201) {
             const message = `An error has occured: ${response.status}`;
             throw {message: message, status: response.status};
-        }
-            const registerUser = await response.json();
-            console.log(registerUser);
-            return registerUser;
-        }catch (error) {
+            } 
+        console.log(response);
+        parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
+        const registerUser = await response.json();
+        console.log(registerUser);
+        return registerUser;
+    }catch (error) {
+            console.log(response);
             console.error('There has been a problem with your fetch operation:', error.message);
             if(error.status === 400){
-                console.log("El correo ya existe");
+                parrafo.innerHTML = "¡Bienvenido, ya puedes iniciar sesión!";
+                console.log("Bienvenido");
         }
     }
 }
@@ -168,7 +171,7 @@ async function login(){
     const email= document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    let respuest = await fetch('http://localhost:8080/api/usuario/login', {
+    let respuest = await fetch('https://awiwitch-greencake.herokuapp.com/api/usuario/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -180,15 +183,18 @@ async function login(){
          })
         })
         console.log(respuest);
-
+        if (respuest.status === 200) {
+            parrafo2.innerHTML = "¡Bienvenido!";
+            window.location.href = "../index.html";
+        }else{
+            parrafo2.innerHTML = "Usuario o contraseña incorrecto <br>";
+        }
 
     let user = localStorage.getItem('usuarios');
-    
-
     let data = JSON.parse(user);
     
+/*
     let validacionData = false;
-
     for(let i = 0; i < data.length; i++){
         if(data[i].correo == email && data[i].contraseña == password){
             validacionData = true;
@@ -199,6 +205,7 @@ async function login(){
         }
     }
     return validacionData;
+    */
  }
  
 
