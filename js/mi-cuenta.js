@@ -131,7 +131,7 @@ async function registroUsuario(){
 
 async function fetchRegisterStatus() {
     try{
-        let response = await fetch('http://localhost:8080/api/usuario/register', {
+        let response = await fetch('https://awiwitch-greencake.herokuapp.com/api/usuario/register', {
             method: 'POST',
             headers: {
         'Accept': 'application/json',
@@ -168,7 +168,7 @@ async function login(){
     const email= document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    let respuest = await fetch('http://localhost:8080/api/usuario/login', {
+    let respuest = await fetch('https://awiwitch-greencake.herokuapp.com/api/usuario/login', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
