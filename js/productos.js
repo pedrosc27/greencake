@@ -1,5 +1,5 @@
 const queryString = window.location.search;
-let baseUrl = "http://localhost:8080/api/producto/";
+let baseUrl = "https://awiwitch-greencake.herokuapp.com/api/producto/";
 let categoria = getAllUrlParams(queryString).categoria; 
 let pagina = getAllUrlParams(queryString).pagina; 
 let url ="productos?pagina=1";
