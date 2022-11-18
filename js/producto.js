@@ -106,7 +106,7 @@ function getAllUrlParams(url) {
   getProduct();
 
   function guardarProducto() {    
-    var win = window.open(`https://wa.me/5218131275658?text=Hola,+estoy+interesado+en+el+Pastel+:+*${nombreWhats}*+,+Tamaño+:+${tamano.value}+,+Bizcocho+:+${bizcocho.value}+,+Relleno+:+${relleno.value}+`, '_blank');
+    var win = window.open(`https://wa.me/5216391367087?text=Hola,+estoy+interesado+en+el+Pastel+:+*${nombreWhats}*+,+Tamaño+:+${tamano.value}+,+Bizcocho+:+${bizcocho.value}+,+Relleno+:+${relleno.value}+`, '_blank');
    
     
 }
